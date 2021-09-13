@@ -23,6 +23,7 @@ class Room extends Equatable {
     this.name,
     required this.type,
     this.updatedAt,
+    this.info,
     required this.users,
   });
 
@@ -74,7 +75,8 @@ class Room extends Equatable {
         name,
         type,
         updatedAt,
-        users
+        users,
+    info
       ];
 
   /// Created room timestamp, in ms
@@ -82,6 +84,9 @@ class Room extends Equatable {
 
   /// Room's unique ID
   final String id;
+  
+   /// Room's unique ID
+  final String info;
 
   /// Room's image. In case of the [RoomType.direct] - avatar of the second person,
   /// otherwise a custom image [RoomType.group].
